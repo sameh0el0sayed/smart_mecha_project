@@ -15,7 +15,13 @@ class CreateWorkshopsTable extends Migration
     {
         Schema::create('workshops', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->bigInteger('VehicleID');
+            $table->bigInteger('UserID');
+            $table->string('description');
+            $table->string('location');
+            $table->integer('Active');
+            $table->integer('Health');
+             $table->timestamps();
         });
     }
 

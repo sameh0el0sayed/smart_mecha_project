@@ -15,6 +15,8 @@ class CreateOutgoingsTable extends Migration
     {
         Schema::create('outgoings', function (Blueprint $table) {
             $table->id();
+            $table->string('Name');
+            $table->decimal('Price',20,2);
             $table->timestamps();
         });
     }

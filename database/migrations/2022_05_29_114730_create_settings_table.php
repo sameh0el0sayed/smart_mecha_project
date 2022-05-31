@@ -15,6 +15,9 @@ class CreateSettingsTable extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
+            $table->decimal('VerLastUpdate');
+            $table->string('Country');
+            $table->decimal('Tax');
             $table->timestamps();
         });
     }

@@ -13,7 +13,17 @@ class Invoice extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('Invoice',function(Blueprint $table){
+            $table->id();
+            $table->bigInteger('CustomerID');
+            $table->bigInteger('VehicleID');
+            $table->bigInteger('OrderID');
+            $table->date('Date');
+            $table->decimal('subtotal',20,2);
+            $table->decimal('Tax',20,2);
+            $table->decimal('Finaltotal',20,2);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +33,6 @@ class Invoice extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('Invoice');
     }
 }

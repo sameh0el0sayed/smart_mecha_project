@@ -13,7 +13,13 @@ class Problems extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('Problems',function(Blueprint $table){
+            $table->id();
+            $table->string('Details');
+            $table->string('Solve');
+            $table->integer('Status');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +29,7 @@ class Problems extends Migration
      */
     public function down()
     {
-        //
+
+        Schema::dropIfExists('Problems');
     }
 }

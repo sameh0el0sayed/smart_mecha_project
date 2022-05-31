@@ -13,7 +13,12 @@ class VehicleCustomer extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('VehicleCustomer',function(Blueprint $table){
+            $table->id();
+            $table->bigInteger('VehicleID');
+            $table->bigInteger('CustomerID');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +28,6 @@ class VehicleCustomer extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('VehicleCustomer');
     }
 }

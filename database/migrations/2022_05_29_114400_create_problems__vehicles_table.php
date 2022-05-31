@@ -15,8 +15,9 @@ class CreateProblemsVehiclesTable extends Migration
     {
         Schema::create('problems__vehicles', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-        });
+            $table->bigInteger('ProblemID');
+            $table->bigInteger('VehicleID');
+         });
     }
 
     /**

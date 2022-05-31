@@ -13,7 +13,14 @@ class Vehicle extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('Vehicle',function(Blueprint $table){
+            $table->id();
+            $table->string('Brand');
+            $table->integer('Year');
+            $table->string('Modal');
+            $table->integer('Kilometre');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ class Vehicle extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('Vehicle');
     }
 }

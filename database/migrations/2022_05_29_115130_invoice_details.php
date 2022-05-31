@@ -13,7 +13,11 @@ class InvoiceDetails extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('InvoiceDetails',function(Blueprint $table){
+            $table->id();
+            $table->bigInteger('invoiceID');
+            $table->bigInteger('ItemID');
+         });
     }
 
     /**
@@ -23,6 +27,6 @@ class InvoiceDetails extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists("InvoiceDetails");
     }
 }
