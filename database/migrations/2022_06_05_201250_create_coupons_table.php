@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Problems extends Migration
+class CreateCouponsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class Problems extends Migration
      */
     public function up()
     {
-        Schema::create('Problem',function(Blueprint $table){
+        Schema::create('Coupon', function (Blueprint $table) {
             $table->id();
-            $table->string('Details');
-            $table->string('Solve');
-            $table->integer('Status');
+            $table->date('Startdate');
+            $table->date('Enddate');
+            $table->integer('DiscountType');
+            $table->decimal('Value',20,2);
             $table->timestamps();
         });
     }
@@ -29,7 +30,6 @@ class Problems extends Migration
      */
     public function down()
     {
-
-        Schema::dropIfExists('Problem');
+        Schema::dropIfExists('Coupon');
     }
 }

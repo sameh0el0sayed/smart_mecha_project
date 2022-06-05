@@ -13,7 +13,7 @@ class CreateProductsVehiclesTable extends Migration
      */
     public function up()
     {
-        Schema::create('product_vehicle', function (Blueprint $table) {
+        Schema::create('ProductVehicle', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('productID');
             $table->bigInteger('vehicleID');
@@ -28,6 +28,6 @@ class CreateProductsVehiclesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('product_vehicle');
+        Schema::dropIfExists('ProductVehicle');
     }
 }

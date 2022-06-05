@@ -13,7 +13,7 @@ class CreateSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('settings', function (Blueprint $table) {
+        Schema::create('Setting', function (Blueprint $table) {
             $table->id();
             $table->decimal('VerLastUpdate');
             $table->string('Country');
@@ -29,6 +29,6 @@ class CreateSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('settings');
+        Schema::dropIfExists('Setting');
     }
 }

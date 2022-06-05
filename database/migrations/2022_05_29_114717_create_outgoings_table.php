@@ -13,7 +13,7 @@ class CreateOutgoingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('outgoings', function (Blueprint $table) {
+        Schema::create('Outgoing', function (Blueprint $table) {
             $table->id();
             $table->string('Name');
             $table->decimal('Price',20,2);
@@ -28,6 +28,6 @@ class CreateOutgoingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('outgoings');
+        Schema::dropIfExists('Outgoing');
     }
 }

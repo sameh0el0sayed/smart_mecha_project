@@ -13,7 +13,7 @@ class CreateWorkshopsTable extends Migration
      */
     public function up()
     {
-        Schema::create('workshops', function (Blueprint $table) {
+        Schema::create('Workshop', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('VehicleID');
             $table->bigInteger('UserID');
@@ -32,6 +32,6 @@ class CreateWorkshopsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('workshops');
+        Schema::dropIfExists('Workshop');
     }
 }

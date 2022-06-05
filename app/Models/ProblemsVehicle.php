@@ -5,18 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * @property Date $Date
- * @property int  $created_at
- * @property int  $updated_at
  */
-class Invoice extends Model
+class ProblemsVehicle extends Model
 {
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'Invoice';
+    protected $table = 'ProblemsVehicle';
 
     /**
      * The primary key for the model.
@@ -31,7 +28,7 @@ class Invoice extends Model
      * @var array
      */
     protected $fillable = [
-        'CustomerID', 'VehicleID', 'OrderID', 'Date', 'subtotal', 'Tax', 'Finaltotal', 'created_at', 'updated_at'
+        'ProblemID', 'VehicleID'
     ];
 
     /**
@@ -49,7 +46,7 @@ class Invoice extends Model
      * @var array
      */
     protected $casts = [
-        'Date' => 'date', 'created_at' => 'timestamp', 'updated_at' => 'timestamp'
+        
     ];
 
     /**
@@ -58,7 +55,7 @@ class Invoice extends Model
      * @var array
      */
     protected $dates = [
-        'Date', 'created_at', 'updated_at'
+        
     ];
 
     /**

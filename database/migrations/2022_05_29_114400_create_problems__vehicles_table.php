@@ -13,7 +13,7 @@ class CreateProblemsVehiclesTable extends Migration
      */
     public function up()
     {
-        Schema::create('problems__vehicles', function (Blueprint $table) {
+        Schema::create('ProblemsVehicle', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('ProblemID');
             $table->bigInteger('VehicleID');
@@ -27,6 +27,6 @@ class CreateProblemsVehiclesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('problems__vehicles');
+        Schema::dropIfExists('ProblemsVehicle');
     }
 }
