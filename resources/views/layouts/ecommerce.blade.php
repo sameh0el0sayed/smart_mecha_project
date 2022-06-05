@@ -29,7 +29,7 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
-                <i class='bx bx-code nav__logo-icon '></i> {{ Config::get('app.name') }}
+                <i class='bx bx-code-alt nav__logo-icon '></i> {{ Config::get('app.name') }}
             </a>
 
             <div class="nav__menu" id="nav-menu">

@@ -13,14 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Ecommerce.Home');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
-// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/admin/index', [App\Http\Controllers\AdminController::class, 'index'])->name('admin_index');
-Route::get('/workshop/index', [App\Http\Controllers\WorkshopsController::class, 'index'])->name('workshop_index');
-Route::get('/booking', [App\Http\Controllers\AppointmentController::class, 'index'])->name('booking_index');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+Route::get('/workshop', [App\Http\Controllers\WorkshopController::class, 'index'])->name('workshop');
+Route::get('/booking', [App\Http\Controllers\AppointmentController::class, 'index'])->name('booking');

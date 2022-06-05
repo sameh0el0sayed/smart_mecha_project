@@ -3,18 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Auth\Authenticatable as AuthenticableTrait;
 
-/**
- * @property string $name
- * @property string $email
- * @property string $password
- * @property string $remember_token
- * @property int    $email_verified_at
- * @property int    $created_at
- * @property int    $updated_at
- */
-class Users extends Model
+class User extends Model implements Authenticatable
 {
+    use AuthenticableTrait;
+
     /**
      * The database table used by the model.
      *
@@ -44,7 +39,7 @@ class Users extends Model
      * @var array
      */
     protected $hidden = [
-        
+
     ];
 
     /**
